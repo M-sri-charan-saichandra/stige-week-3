@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+body{
+background-color:black;;
+}
+div{
+margin: auto;
+background-color:rgba(0, 0, 0, 0);
+color:white;
+text-align: center;
+border-radius: 15px;
+padding: 20px;
+font-size:30px;
+width: 200px;
+}
+button{
+background-color:red;
+color:white;
+text-align: center;
+border-radius: 12px;
+padding: 20px;
+font-size:30px;
+width: 200px;
+box-shadow: 0 9px rgba(153, 153, 153, 0.63);
+}
+button:hover{
+    background-color:green;
+}
+button:active{
+    background-color:blue;
+    box-shadow: 0 15px rgba(255, 255, 255, 0.534);
+    transform: translateX(4px);
+}
+#print{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<h1 style="color:white; text-align:center;">Random quote generator</h1>
+<div><button onclick="func()">Press me</button></div>
+<h1 id="print" style="color:#eeff00; font-style:oblique; font-size:50px;"></h1>
+
+<script>
+var quotes=[
+'A rose by any other name would smell as sweet. - William Shakespeare',
+'Ask not what your country can do for you; ask what you can do for your country. - John Kennedy',
+'If you are going through hell, keep going. - Winston Churchill',
+'Keep your friends close, but your enemies closer. - Michael Corleone',
+'Knowledge is power. - Sir Francis Bacon',
+'No one can make you feel inferior without your consent. - Eleanor Roosevelt',
+'Not all those who wander are lost. - J. R. R. Tolkein',
+'Parting is such sweet sorrow. - William Shakespeare',
+'Power corrupts; absolute power corrupts absolutely. - John Dalberg-Acton',
+'That’s one small step for a man, a giant leap for mankind. - Neil Armstrong',
+'Whatever you are, be a good one. - Abraham Lincoln',
+'You must be the change you wish to see in the world. - Mahatma Gandhi'
+]
+function func(){
+var randomnum = Math.floor(Math.random()*(quotes.length));
+document.getElementById('print').innerHTML= quotes[randomnum];
+}
+</script>
+</body>
+</html>
